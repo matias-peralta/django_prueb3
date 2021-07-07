@@ -1,0 +1,289 @@
+@import url(estructura_basica.css);
+
+
+
+
+.buscar{
+
+    position: absolute;
+    padding: 5px;
+
+}
+
+.buscar input{
+
+    width: 500px;
+    height: 40px;
+    padding: 0 20px;
+    font-size: 18px;
+    color: #000;
+    border-color: black;
+    color: black;
+    outline: none;
+    border: 1px solid silver;
+    border-radius: 30px;
+    float: left;
+    background-color: white;
+
+}
+
+.bInicio a{
+
+    float: right;
+    text-decoration: none;
+    background-color: white;
+    width: 150px;
+    padding: 5px;
+    border: 2px solid gray;
+    color: black;
+    border-color: black;
+    
+    
+    
+}
+
+.bInicio a:hover{
+
+    background-color: gray;
+
+}
+
+
+.img_carrusel{
+    margin: 0%;
+    width: 100px;
+}
+.img_carrusel2{
+    margin: 0;
+    width: 600px;
+}
+.img_carrusel3{
+    margin: 0;
+    width: 600px;
+}
+.img_seccion{
+    
+    width: 200px;
+    margin: 0;
+}
+.txtsecciones {
+
+   width: 100px;
+   margin: 0;
+}
+
+.txtPinturas{
+
+    width: 10px;
+    margin: 0;
+}
+
+.img_seccion2{
+
+    width: 200px;
+    margin: 0;
+}
+.txtEsculturas{
+    width: 10px;
+    margin: 0;
+}
+
+.img_seccion3{
+    width: 200px;
+    margin: 0;
+}
+.img_seccion4{
+    width: 200px;
+    margin: 0;
+}
+.txtOrfebreria{
+    width: 10px;
+    margin: 0;
+}
+
+.txtTejidos{
+
+    width: 10px;
+    margin: 0;
+}
+.img_seccion_artista1{
+    width: 200px;
+    margin: 0;
+}
+.img_seccion_artista2{
+    width: 200px;
+    margin: 0;
+}
+.img_seccion_artista3{
+    width: 200px;
+    margin: 0;
+}
+.img_seccion_artista4{
+    width: 200px;
+    margin: 0;
+}
+
+.txtArtistas{
+    width: 10px;
+    margin: 0;
+}
+.txtArtistas1{
+    width: 10px;
+    margin: 0;
+}
+.txtArtistas2{
+    width: 10px;
+    margin: 0;
+}
+.txtArtistas3{
+    width: 10px;
+    margin: 0;
+}
+.txtArtistas4{
+    width: 10px;
+    margin: 0;
+}
+
+.img_carrusel img{
+
+    position: relative;
+    top: 100px;
+    width: 650px;
+    margin: 0;
+
+}
+
+
+.img_carrusel2 img{
+
+    position: relative;
+    left: 630px;
+    bottom: 505px;
+    width: 650px;
+    margin: 0;
+}
+
+.img_carrusel3 img{
+
+    position: relative;
+    left: 1270px;
+    bottom: 1108px;
+    width: 650px;
+    margin: 0;
+
+}
+
+input, textarea{
+
+    outline: none;
+    
+    
+}
+
+
+.txtsecciones h3{
+    position: relative;
+    top: 100px;
+    left: 100px;
+}
+.img_seccion img{
+
+    position: relative;
+    left: 300px;
+    top: 100px;
+}
+.txtPinturas h3{
+
+    position: relative;
+    top: 100px;
+    left: 345px;
+}
+.img_seccion2 img{
+
+    position: relative;
+    bottom: 240px;
+    left: 600px;
+}
+.txtEsculturas h3{
+
+    position: relative;
+    bottom: 240px;
+    left: 638px;
+}
+.img_seccion3 img{
+    position: relative;
+    bottom: 580px;
+    left: 950px;
+}
+.img_seccion4 img{
+    position: relative;
+    bottom: 920px;
+    left: 1288px;
+}
+
+.txtOrfebreria h3{
+    position: relative;
+    bottom: 579px;
+    left: 990px;
+
+}
+.txtTejidos h3{
+    position: relative;
+    bottom: 919px;
+    left: 1350px;
+}
+.img_seccion_artista1 img{
+    position: relative;
+    bottom: 792px;
+    left: 290px;
+}
+.img_seccion_artista2 img{
+    position: relative;
+    bottom: 1135px;
+    left: 600px;
+}
+.img_seccion_artista3 img{
+    position: relative;
+    bottom: 1478px;
+    left: 950px;
+}
+
+.img_seccion_artista4 img{
+    position: relative;
+    bottom: 1820px;
+    left: 1288px;
+}
+.txtArtistas h3{
+    position: relative;
+    bottom: 835px;
+    left: 100px;
+}
+.txtArtistas1 h3{
+    position: relative;
+    bottom: 790px;
+    left: 350px;
+}
+.txtArtistas2 h3{
+    position: relative;
+    bottom: 1130px;
+    left: 650px;
+}
+.txtArtistas3 h3{
+    position: relative;
+    bottom: 1475px;
+    left: 975px;
+}
+.txtArtistas4 h3{
+    position: relative;
+    bottom: 1818px;
+    left: 1300px;
+}
+
+.clima{
+
+    position: relative;
+    bottom: 1700px;
+
+
+
+}

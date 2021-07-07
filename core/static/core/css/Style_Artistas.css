@@ -1,0 +1,107 @@
+@import url(estructura_basica.css);
+
+
+
+.field{
+
+    position: relative;
+    left: 240px;
+    bottom: 35px;
+
+}
+
+.field2{
+
+    position: relative;
+    left: 520px;
+    bottom: 35px;
+
+}
+
+.field3{
+
+    position: relative;
+    left: 760px;
+    bottom: 35px;
+
+}
+
+.field4{
+
+    position: relative;
+    left: 960px;
+    bottom: 35px;
+    
+
+}
+
+.field5{
+
+    position: relative;
+    left: 160px;
+    bottom: 35px;
+
+}
+
+.field6{
+
+    position: relative;
+    left: 230px;
+    bottom: 55px;
+
+}
+
+.field7{
+
+    position: relative;
+    left: 300px;
+    bottom: 35px;
+
+}
+
+.field8{
+
+    position: relative;
+    left: 380px;
+    bottom: 35px;
+    
+
+}
+
+.bInicio a{
+
+    float: left;
+    position: relative;
+    bottom: 895px;
+    text-decoration: none;
+    background-color: white;
+    width: 100px;
+    padding: 5px;
+    border: 3px solid black;
+    color: black;
+    
+    
+}
+
+.bInicio a:hover{
+
+    background-color: gray;
+
+}
+
+.encabezado a{
+
+    float: right;
+    position: relative;
+    bottom: 225px;
+    left: 10px;
+    padding: 5px;
+    border-color: red;
+    background-color:white;
+    border: 3px solid black;
+    text-decoration: none;
+    color: black;
+    width: 170px;
+    
+    
+}

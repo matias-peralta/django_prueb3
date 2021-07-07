@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="Style_Inicio.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+    <script>
+ 
+        $(document).ready(function(){
+           $("#msg").hide();
+           $("#msg2").hide();        
+ 
+           var url = "https://www.metaweather.com/api/location/search/?lattlong=";
+ 
+                //if("geolocation" in navigator)
+                if (navigator.geolocation) {
+                    navigator.geolocation.getCurrentPosition(showPosition);
+                } else {
+                    $("#msg2").append("Geolocation is not supported by this browser.");
+                    $("#msg2").show();
+                }
+             
+            function showPosition(position) {
+                $("#mensajeLatLon").remove();
+                $("#msg").append(`<div id="mensajeLatLon">Latitude: ${position.coords.latitude} <br> Longitude: ${position.coords.longitude}</div>`);
+                
+                var lat = position.coords.latitude;
+                var lon = position.coords.longitude;
+                //https://www.metaweather.com/api/location/search/?lattlong=position.coords.latitude,position.coords.longitude
+                var urlFormatted = `${url}${lat},${lon}`;
+ 
+                $.get(urlFormatted,function(data){
+                    console.log(data);
+                }).then(function(data){
+
+                    //URL PARA OBTENER CLIMA
+                    var nuevaUrl = ` https://www.metaweather.com/api/location/${data[0].woeid} `;
+                    console.log(nuevaUrl);
+
+                    //OBTENER DATOS DE CLIMA POR WOEID
+                    $.get(nuevaUrl,function(data){
+                        console.log(data);
+
+                        console.log(data.consolidated_weather[0].the_temp);
+                    
+                    if(data.consolidated_weather[0].weather_state_abbr == "sn" ){
+
+                            $("#msg3").append("Temperatura del dia: " +   data.consolidated_weather[0].the_temp + " C° " +  data.consolidated_weather[0].weather_state_name + "           " );
+                            $("msg3").show();
+                            $("#msg3").append(`<img src="https://www.metaweather.com/static/img/weather/sn.svg"  width="50px" height="50px">`);
+                        }
+
+                    else if(data.consolidated_weather[0].weather_state_abbr == "hc" ){
+
+                            $("#msg3").append("Temperatura del dia: " +   data.consolidated_weather[0].the_temp + " C° " +  data.consolidated_weather[0].weather_state_name + "              " );
+                            $("msg3").show();
+                            $("#msg3").append(`<img src="https://www.metaweather.com/static/img/weather/hc.svg"  width="50px" height="50px">`);
+                        }
+        
+                    
+                    else if(data.consolidated_weather[0].weather_state_abbr == "sl" ){
+
+                            $("#msg3").append("Temperatura del dia: " +   data.consolidated_weather[0].the_temp + " C° " +  data.consolidated_weather[0].weather_state_name + "              " );
+                            $("msg3").show();
+                            $("#msg3").append(`<img src="https://www.metaweather.com/static/img/weather/sl.svg"  width="50px" height="50px">`);
+                        }
+                    else if(data.consolidated_weather[0].weather_state_abbr == "h" ){
+
+                            $("#msg3").append("Temperatura del dia: " +   data.consolidated_weather[0].the_temp + " C° " +  data.consolidated_weather[0].weather_state_name + "              " );
+                            $("msg3").show();
+                            $("#msg3").append(`<img src="https://www.metaweather.com/static/img/weather/h.svg"  width="50px" height="50px">`);
+                        }
+                    else if(data.consolidated_weather[0].weather_state_abbr == "t" ){
+
+                            $("#msg3").append("Temperatura del dia: " +   data.consolidated_weather[0].the_temp + " C° " +  data.consolidated_weather[0].weather_state_name + "              " );
+                            $("msg3").show();
+                            $("#msg3").append(`<img src="https://www.metaweather.com/static/img/weather/t.svg"  width="50px" height="50px">`);
+                        }
+                    else if(data.consolidated_weather[0].weather_state_abbr == "hr" ){
+
+                            $("#msg3").append("Temperatura del dia: " +   data.consolidated_weather[0].the_temp + " C° " +  data.consolidated_weather[0].weather_state_name + "              " );
+                            $("msg3").show();
+                            $("#msg3").append(`<img src="https://www.metaweather.com/static/img/weather/hr.svg"  width="50px" height="50px">`);
+                        }
+                    else if(data.consolidated_weather[0].weather_state_abbr == "lr" ){
+
+                            $("#msg3").append("Temperatura del dia: " +   data.consolidated_weather[0].the_temp + " C° " +  data.consolidated_weather[0].weather_state_name + "              " );
+                            $("msg3").show();
+                            $("#msg3").append(`<img src="https://www.metaweather.com/static/img/weather/lr.svg"  width="50px" height="50px">`);
+                        }
+                    else if(data.consolidated_weather[0].weather_state_abbr == "s" ){
+
+                            $("#msg3").append("Temperatura del dia: " +   data.consolidated_weather[0].the_temp + " C° " +  data.consolidated_weather[0].weather_state_name + "              " );
+                            $("msg3").show();
+                            $("#msg3").append(`<img src="https://www.metaweather.com/static/img/weather/s.svg"  width="50px" height="50px">`);
+                        }
+                    else if(data.consolidated_weather[0].weather_state_abbr == "lc" ){
+
+                            $("#msg3").append("Temperatura del dia: " +   data.consolidated_weather[0].the_temp + " C° " +  data.consolidated_weather[0].weather_state_name + "              " );
+                            $("msg3").show();
+                            $("#msg3").append(`<img src="https://www.metaweather.com/static/img/weather/lc.svg"  width="50px" height="50px">`);
+                        }
+                    else if(data.consolidated_weather[0].weather_state_abbr == "c" ){
+
+                            $("#msg3").append("Temperatura del dia: " +   data.consolidated_weather[0].the_temp + " C° " +  data.consolidated_weather[0].weather_state_name + "              " );
+                            $("msg3").show();
+                            $("#msg3").append(`<img src="https://www.metaweather.com/static/img/weather/c.svg"  width="50px" height="50px">`);
+                            }
+                    })
+
+
+                })
+ 
+            }
+ 
+        })
+ 
+ 
+    </script>
+
+</head>
+<body>
+    <div class="container-fluid g-0 ">
+        <div class="row">
+            <div class="col-xxl-12  col-md-12 col-xs-12">      
+                <div class="logo">
+                    <img src="./img/logo.png" alt="logo arte">
+
+                </div>
+                <div class="encabezado">
+                    <div >
+
+                    <h1 class="titulopagina">Galeria de Arte</h1>
+                    
+                    
+                    </div>
+                    
+                    <div>
+                        <a href="Registro.html"> Registrar</a>
+                    </div>
+                    <div>
+                        <a href="Login.html">Iniciar Sesion</a>
+                    </div>
+
+                    <div>
+                        <a href="Conocenos.html">Conocenos</a>
+                    </div>
+
+                    <div>
+                        <a href="Nuevas_Obras.html">Obras</a>
+                    </div>
+
+                    <div>
+                        <a href="Artistas.html"> Artistas</a>
+                    </div>
+
+                    
+                </div>
+                
+                <div>
+
+                    <img class ="tamañoportada" src="./img/portada.jpg" class="img-fluid" alt="Portada Pagina"   >
+
+                </div>
+                
+                <br>
+
+                <div class="buscar">
+
+                    <input type="text" placeholder="buscar" required>
+
+                </div>
+
+                <div class="bInicio">
+
+                    <a href="Revisar_Obras.html">Revisiones</a>
+
+                </div>
+
+                <div class="bInicio">
+
+                    <a href="Agregar_Obra.html">Agregar Obra</a>
+
+                </div>
+                
+                <br><br><br><br>
+
+                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <img src="/img/el-arte-del-terror.jpg" class="d-block w-100" class="img-fluid" alt="imagen_el_grito" width="700px" height="700px">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="/img/“LA GIOCONDA”.jpg" class="d-block w-100" alt="imagen_la_gioconda"width="700px" height="700px">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="/img/68700.jpg" class="d-block w-100" alt="imagen_2"width="700px" height="700px">
+                      </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                  </div>
+                  
+                  <div class="txtsecciones">
+
+                    <h3>Secciones</h3>
+
+                </div>
+                <div class="img_seccion">
+                    <img src="/img/“LA GIOCONDA”.jpg" alt="imagen_seccion" width="200px">
+
+                </div>
+                <div class="txtPinturas">
+                    <h3>Pinturas</h3>
+                </div>
+                <div class="img_seccion2">
+                    <img src="/img/escultura-coderechmalavia.jpg" alt="imagen_seccion2" width="200px" height="300px">
+                </div>   
+                <div class="txtEsculturas">
+                    <h3>Esculturas</h3> 
+                </div>
+                <div class="img_seccion3">
+                    <img src="/img/images.jfif" alt="img_seccion3" width="200px" height="300px">
+                </div>
+                <div class="txtOrfebreria">
+                    <h3>Orfebreria</h3>
+                </div>
+                <div class="img_seccion4">
+                    <img src="/img/tejido.jpg" alt="img_seccion4" width="200px" height="300px">
+
+                </div>
+                <div class="txtTejidos">
+                    <h3>Tejidos</h3>
+                </div>
+                <div class="txtArtistas">
+                    <h3>Artistas</h3>
+
+                </div>
+                <div class="img_seccion_artista1">
+                    <img src="/img/artista1.jfif" alt="img_artista1" width="200px" height="300px">
+                </div>
+                 
+                <div class="txtArtistas1">
+                    <h3>Ichigo</h3>
+
+                </div>
+                <div class="img_seccion_artista2">
+                    <img src="/img/guts.jfif" alt="img_artista2" width="200px" height="300px">
+                </div>
+                <div class="txtArtistas2">
+                    <h3>Nathan</h3>
+
+                </div>
+                <div class="img_seccion_artista3">
+                    <img src="/img/artista3.png" alt="img_artista3" width="200px" height="300px">
+                </div>
+                <div class="txtArtistas3">
+                    <h3>Bai_Xaochin</h3>
+
+                </div>
+                <div class="img_seccion_artista4">
+                    <img src="/img/artista4.jfif" alt="img_artista4" width="200px" height="300px">
+                </div>
+                <div class="txtArtistas4">
+                    <h3>Miguel_Works</h3>
+
+                </div>
+                
+                <div class="clima">
+                    <h1>Bienvenido a la informacion del clima</h1>
+                    <div class="alert alert-primary" role="alert" id="msg">
+                    </div>
+                    <div class="alert alert-danger" role="alert" id="msg2">
+                    </div>
+                    
+                    <h2>Temperatura del dia</h2>
+                    <div class="alert alert-primary" style="background-color:gray"  role="alert" id="msg3">
+                    </div>
+                </div>
+                        <br><br><br><br>
+                    </div>      
+                </div>    
+            </div>
+
+    
+    <br><br><br><br><br>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>  
+ </body>
+ </html>

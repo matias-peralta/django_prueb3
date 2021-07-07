@@ -1,0 +1,159 @@
+@import url(estructura_basica.css);
+
+.lblAgregarObras{
+
+    margin: 60px;
+    
+   
+}
+
+form {
+
+    margin: 60px;
+    height: 500px;
+
+}
+
+.field{
+
+    position: relative;
+    left: 130px;
+    bottom: 35px;
+
+}
+
+.field2{
+
+    position: relative;
+    left: 130px;
+    bottom: 35px;
+
+}
+
+.field3{
+
+    position: relative;
+    left: 130px;
+    bottom: 35px;
+
+}
+.field4{
+
+    position: relative;
+    left: 130px;
+    bottom: 35px;
+
+}
+.field5{
+
+    position: relative;
+    left: 130px;
+    bottom: 35px;
+
+}
+.field6{
+
+    position: relative;
+    left: 600px;
+    bottom: 395px;
+    height: 100px;
+    width: 300px;
+
+}
+.field7{
+
+    position: relative;
+    left: 600px;
+    bottom: 375px;
+    height: 100px;
+    width: 300px;
+
+}
+
+.p_derecha{
+
+    position: relative;
+    left: 500px;
+    bottom: 360px;
+    width: 300px;
+
+}
+
+.p_derecha2{
+
+    position: relative;
+    left: 500px;
+    bottom: 340px;
+    width: 300px;
+
+}
+
+.btn{
+
+    position: relative;
+    left: 690px;
+    bottom: 280px;
+    height: 39px;
+
+}
+
+.btn-green{
+
+    color: white;
+    background-color: #3CC93F;
+}
+.btn-green:hover{
+
+    color: white;
+    background-color: #37B839;
+}
+input, textarea{
+
+    outline: none;
+    
+    
+}
+
+.img_a_obras{
+
+    position: relative;
+    left: 980px;
+    bottom: 569px;
+    width: 350px;
+
+
+}
+.bInicio a{
+
+    float: left;
+    position: relative;
+    bottom: 1560px;
+    text-decoration: none;
+    background-color:white;
+    width: 100px;
+    padding: 5px;
+    border: 3px solid black;
+    color: black;
+
+}
+.bInicio a:hover{
+
+    background-color: gray;
+
+}
+.encabezado a{
+
+    float: right;
+    position: relative;
+    bottom: 225px;
+    left: 10px;
+    padding: 5px;
+    border-color: red;
+    background-color:white;
+    border: 3px solid black;
+    text-decoration: none;
+    color: black;
+    width: 170px;
+    
+    
+}

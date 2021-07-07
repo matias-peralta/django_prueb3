@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="Style_obras.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <title>Obras</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $("#verObras").click(function(){
+                console.log("olaaa");
+                var url = "https://api.artic.edu/api/v1/artworks?fields=title,image_id,artist_titles,place_of_origin,date_start,api_link?page=1&limit=25";
+
+                $.get(url,function(data){
+
+                    //console.log(data.data[0].title);
+                    //console.log(data.data[0].date_start);
+                    //console.log(data.data[0].place_of_origin);
+                    //console.log(data.data[0].artist_titles[0]);
+                    //console.log(data.data[0].image_id);
+
+                    $.each(data.data , function(i,elemento){
+
+                        console.log(elemento.title);
+                        console.log(elemento.date_start);
+                        console.log(elemento.place_of_origin);
+                        console.log(elemento.artist_titles[0]);
+                        console.log(elemento.image_id);
+                        console.log("------------------------")
+
+                        var urlImagen = "https://www.artic.edu/iiif/2/" + elemento.image_id + "/full/200,/0/default.jpg";
+
+                        $("#Obras").append("<tr> <td>" + elemento.title + "</td>  <td>" + elemento.date_start+ "</td>  <td>" + elemento.place_of_origin + "</td>  <td>" + elemento.artist_titles[0] +"</td> <td>    <img src=" +  urlImagen +"/>    </td> </tr>")
+
+                    } )
+
+                })
+            })
+        })
+
+    </script>
+</head>
+<body>
+    <div class="container-fluid g-0">
+        <div class="row">
+            <div class="col-xxl-12  col-md-12 col-xs-12">
+                <div class="logo">
+                    <img src="./img/logo.png" alt="logo arte">
+
+                </div>
+                <div class="encabezado">
+                    <div >
+
+                    <h1 class="titulopagina">Galeria de Arte</h1>
+                
+                
+                    </div>
+                
+                    <div>
+                        <a href="Registro.html"> Registrar</a>
+                    </div>
+                    <div>
+                        <a href="Login.html">Iniciar Sesion</a>
+                    </div>
+
+                    <div>
+                        <a href="Conocenos.html">Conocenos</a>
+                    </div>
+
+                    <div>
+                        <a href="Nuevas_Obras.html">Obras</a>
+                    </div>
+
+                    <div>
+                        <a href="Artistas.html"> Artistas</a>
+                    </div>
+
+                
+                </div>
+                
+                <div>
+
+                <img class ="tamañoportada" src="./img/portada.jpg" class="img-fluid" alt="Portada Pagina"   >
+
+                </div>
+
+                <br><br><br>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="container">
+        <div class="row">
+
+            <h1>Proximas Obras</h1>
+
+        </div>
+        <div class="row">
+
+            <button type="button" id="verObras" class="btn btn-primary">
+
+                Ver Obras
+
+            </button>
+
+        </div>
+
+        <div class="bInicio">
+
+            <a href="index.html">Inicio</a>
+        </div> 
+        <div class="row">
+
+            <table class="table"id="Obras" style="font-weight: 500;">
+
+                <thead>
+                    <tr>
+                        <th>Titulo</th>
+                        <th>Fecha Creacion</th>
+                        <th>Origen</th>
+                        <th>Artista</th>
+                        <th>Imagen</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+
+        </div>
+
+
+    </div>
+      
+    <br><br><br>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+</body>
+</html>

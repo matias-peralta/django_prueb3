@@ -1,0 +1,216 @@
+@import url(estructura_basica.css);
+.encabezado a{
+
+    float: right;
+    position: relative;
+    bottom: 225px;
+    left: 10px;
+    padding: 5px;
+    border-color: red;
+    background-color:white;
+    border: 3px solid black;
+    text-decoration: none;
+    color: black;
+    width: 170px;
+    
+    
+}
+
+.img_revicion_obra{
+
+    position: relative;
+    left: 130px;
+    top: 80px;
+    width: 50PX;
+
+}
+.lbl_autor_revicion{
+
+    position: relative;
+    left: 500px;
+    bottom: 230px;
+    width: 50PX;
+
+}
+.lbl_titulo_revicion{
+    position: relative;
+    left: 500px;
+    bottom: 800px;
+    width: 50PX;
+
+}
+.lbl_precio_revicion{
+    position: relative;
+    left: 500px;
+    bottom: 770px;
+    width: 50PX;
+}
+.lbl_tecnica_revicion{
+    position: relative;
+    left: 800px;
+    bottom: 955px;
+    width: 50PX;
+}
+.lbl_descripcion_revicion{
+    position: relative;
+    left: 800px;
+    bottom: 925px;
+    width: 50PX;
+}
+.lbl_historia_revicion{
+    position: relative;
+    left: 800px;
+    bottom: 890px;
+    width: 50PX;
+}
+.lbl_peso_revicion{
+    position: relative;
+    left: 1160px;
+    bottom: 1080px;
+    width: 50PX;
+}
+.lbl_dimensiones_revicion{
+    position: relative;
+    left: 1160px;
+    bottom: 1050px;
+    width: 50PX;
+}
+.lbl_comentarios_revicion{
+    position: relative;
+    left: 1160px;
+    bottom: 1010px;
+    width: 50PX;
+}
+.lbl_cbox{
+    position: relative;
+    left: 480px;
+    bottom: 145px;
+}
+.lbl_cbox2{
+    position: relative;
+    left: 650px;
+    bottom: 230px;
+}
+input, textarea{
+
+    outline: none;
+    
+    
+}
+
+form {
+
+    margin: 60px;
+    height: 500px;
+
+}
+.field1{
+    position: relative;
+    left: 500px;
+    bottom: 335px;
+
+}
+.field2{
+    position: relative;
+    left: 320px;
+    bottom:265px;
+}
+.field3{
+    position: relative;
+    left: 140px;
+    bottom: 190px;
+}
+.field4{
+    position: relative;
+    left: 310px;
+    bottom: 335px;
+}
+.field5{
+    position: relative;
+    left: 130px;
+    bottom: 255px;
+    height: 40px;
+}
+.field6{
+    position: relative;
+    left: -50px;
+    bottom: 190px;
+    height: 20px;
+}
+.field7{
+    position: relative;
+    left: 150px;
+    bottom: 340px;
+}
+.field8{
+    position: relative;
+    left: -30px;
+    bottom: 270px;
+}
+.field9{
+    position: relative;
+    left: -210px;
+    bottom: 180px;
+    height: 60px;
+}
+.checkbox1{
+    position: relative;
+    height: 20px;
+    width: 20px;
+    right: 1200px;
+    bottom: 80px;
+}
+.checkbox2{
+    position: relative;
+    height: 20px;
+    width: 20px;
+    left: 600px;
+    bottom: 190px;
+}
+.bInicio a{
+
+    float: left;
+    position: relative;
+    bottom: 1880px;
+    text-decoration: none;
+    background-color: white;
+    width: 100px;
+    padding: 5px;
+    border: 3px solid black;
+    color: black;
+    
+    
+}
+
+.bInicio a:hover{
+
+    background-color: gray;
+
+}
+.btn{
+    position: relative;
+    left: 800px;
+    bottom: 280px;
+    border-radius: 3px;
+    display:  inline-block;
+    padding: 10px 20px;
+    text-decoration: none;
+    text-shadow: 0 1px 0 rgba(255,255,255,0.3);
+    box-shadow: 0 1px 1px rgba(0,0,0,0.3);
+
+}
+
+.btn-green{
+
+    color: white;
+    background-color: #3CC93F;
+}
+.btn-green:hover{
+
+    color: white;
+    background-color: #37B839;
+}
+btn-green:active{
+
+    background-color: #29962A;
+}
