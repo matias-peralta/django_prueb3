@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    {% load static %}
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -44,6 +45,151 @@
 
                     
                 </div>
+                <div>    
+
+                    <img class ="tamañoportada" src="{% static 'core/img/portada.jpg' %}" class="img-fluid" alt="Portada Pagina"   >
+
+                </div>
+                
+                <br>
+
+                <div class="buscar">
+
+                    <input type="text" placeholder="buscar" required>
+
+                </div>
+
+                <div class="bInicio">
+
+                    <a href="Revisar_Obras.html">Revisiones</a>
+
+                </div>
+
+                <div class="bInicio">
+
+                    <a href="Agregar_Obra.html">Agregar Obra</a>
+
+                </div>
+                
+                <br><br><br><br>
+
+                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        
+                        <img src="{% static 'core/img/el-arte-del-terror.jpg' %}" class="d-block w-100" class="img-fluid" alt="imagen_el_grito" width="700px" height="700px">
+                      </div>
+                      <div class="carousel-item">
+                        
+                        <img src="{% static 'core/img/“LA GIOCONDA”.jpg' %}" class="d-block w-100" alt="imagen_la_gioconda"width="700px" height="700px">
+                      </div>
+                      <div class="carousel-item">
+                        
+                        <img src="{% static 'core/img/68700.jpg' %}"  class="d-block w-100" alt="imagen_2"width="700px" height="700px">
+                      </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                  </div>
+                  
+                  <div class="txtsecciones">
+
+                    <h3>Secciones</h3>
+
+                </div>
+                <div class="img_seccion">
+                    <img src="{% static 'core/img/“LA GIOCONDA”.jpg' %}" alt="imagen_seccion" width="200px">
+
+                </div>
+                <div class="txtPinturas">
+                    <h3>Pinturas</h3>
+                </div>
+                <div class="img_seccion2">
+                    
+                    <img src="{% static 'core/img/escultura-coderechmalavia.jpg' %}" alt="imagen_seccion2" width="200px" height="300px">
+                </div>   
+                <div class="txtEsculturas">
+                    <h3>Esculturas</h3> 
+                </div>
+                <div class="img_seccion3">
+                    
+                    
+                    <img src="{% static 'core/img/images.jfif' %}" alt="img_seccion3" width="200px" height="300px">
+                </div>
+                <div class="txtOrfebreria">
+                    <h3>Orfebreria</h3>
+                </div>
+                <div class="img_seccion4">
+                    <img src="{% static 'core/img/tejido.jpg' %}" alt="img_seccion4" width="200px" height="300px">
+
+                </div>
+                <div class="txtTejidos">
+                    <h3>Tejidos</h3>
+                </div>
+                <div class="txtArtistas">
+                    <h3>Artistas</h3>
+
+                </div>
+                <div class="img_seccion_artista1"> 
+                    
+                    <img src="{% static 'core/img/artista1.jfif' %}" alt="img_artista1" width="200px" height="300px">
+                </div>
+                 
+                <div class="txtArtistas1">
+                    <h3>Ichigo</h3>
+
+                </div>
+                <div class="img_seccion_artista2">
+                    
+                    <img src="{% static 'core/img/guts.jfif' %}" alt="img_artista2" width="200px" height="300px">
+                </div>
+                <div class="txtArtistas2">
+                    <h3>Nathan</h3>
+
+                </div>
+                <div class="img_seccion_artista3">
+                    
+                    <img src="{% static 'core/img/artista3.png' %}" alt="img_artista3" width="200px" height="300px">
+                </div>
+                <div class="txtArtistas3">
+                    <h3>Bai_Xaochin</h3>
+
+                </div>
+                <div class="img_seccion_artista4">
+                     
+                    <img src="{% static 'core/img/artista4.jfif' %}" alt="img_artista4" width="200px" height="300px">
+                </div>
+                <div class="txtArtistas4">
+                    <h3>Miguel_Works</h3>
+
+                </div>
+                
+                <div class="clima">
+                    <h1>Bienvenido a la informacion del clima</h1>
+                    <div class="alert alert-primary" role="alert" id="msg">
+                    </div>
+                    <div class="alert alert-danger" role="alert" id="msg2">
+                    </div>
+                    
+                    <h2>Temperatura del dia</h2>
+                    <div class="alert alert-primary" style="background-color:gray"  role="alert" id="msg3">
+                    </div>
+                </div>
+                        <br><br><br><br>
+                    </div>      
+                </div>    
+            </div>
     
     
 </body>
