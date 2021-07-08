@@ -10,3 +10,18 @@ def Agregar_Obra(request):
 
 def Artistas(request):
     return render(request,'core/Artistas.html')
+
+def Conocenos(request):
+    return render(request,'core/Conocenos.html')
+
+def Login(request):
+    return render(request,'core/Login.html')
+
+def Nuevas_Obras(request):
+    return render(request,'core/Nuevas_Obras.html')
+
+def registro(request):
+    return render(request,'core/registro.html')
+
+def Revisar_Obras(request):
+    return render(request,'core/Revisar_Obras.html')

@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    {%load static%}
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link type="text/css" rel="stylesheet" href="Style_Conocenos.css" />
+    <link type="text/css" rel="stylesheet" href="{%static 'core/css/Style_Conocenos.css'%}" />
     <title>Conocenos</title>
 </head>
 <body>
+    {%load static%}
     <div class="container-fluid">
       <div class="row"> 
         <div class="logo">
@@ -24,7 +26,7 @@
             </div>
             
             <div>
-                <a href="{%url 'Registro' %}"> Registrar</a>
+                <a href="{%url 'registro' %}"> Registrar</a>
             </div>
             <div>
                 <a href="{%url 'Login' %}">Iniciar Sesion</a>
@@ -47,7 +49,7 @@
         
         <div>
 
-            <img class ="tamañoportada" src="./img/portada.jpg" alt="Portada Pagina"   >
+            <img class ="tamañoportada" src="{%static 'core/img/portada.jpg'%}" alt="Portada Pagina"   >
 
         </div>
         
@@ -82,7 +84,7 @@
         <input type="text" class="field4">
         
     
-        <input type="button" class="btn btn-green" value="Iniciar Sesion">
+        <input type="button" class="btn btn-green" value="Enviar">
     
     
     

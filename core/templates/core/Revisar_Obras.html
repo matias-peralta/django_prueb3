@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    {%load static%}
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Style_Revisar_obra.css" type="text/css">
+    <link rel="stylesheet" href="{%static 'core/css/Style_Revisar_obra.css'%}" type="text/css">
     <title>Aprobar_Obra</title>
 </head>
 <body>
+    {%load static%}
     <div class="logo">
-        <img src="./img/logo.png" alt="logo arte">
+        <img src="{%static 'core/img/logo.png'%}" alt="logo arte">
 
     </div>
     <div class="encabezado">
@@ -21,22 +23,22 @@
         </div>
         
         <div>
-            <a href="Registro.html"> Registrar</a>
+            <a href="{%url 'registro' %}"> Registrar</a>
         </div>
         <div>
-            <a href="Login.html">Iniciar Sesion</a>
-        </div>
-
-        <div>
-            <a href="Conocenos.html">Conocenos</a>
+            <a href="{%url 'Login' %}">Iniciar Sesion</a>
         </div>
 
         <div>
-            <a href="Nuevas_Obras.html">Obras</a>
+            <a href="{%url 'Conocenos' %}">Conocenos</a>
         </div>
 
         <div>
-            <a href="Artistas.html"> Artistas</a>
+            <a href="{%url 'Nuevas_Obras' %}">Obras</a>
+        </div>
+
+        <div>
+            <a href="{%url 'Artistas' %}"> Artistas</a>
         </div>
 
         
@@ -44,12 +46,12 @@
     
     <div>
 
-        <img class ="tamañoportada" src="./img/portada.jpg" class="img-fluid" alt="Portada Pagina"   >
+        <img class ="tamañoportada" src="{%static 'core/img/portada.jpg'%}" class="img-fluid" alt="Portada Pagina"   >
 
     </div>
     <br>
     <div class="img_revicion_obra">
-        <img src="/img/obras-de-arte.jpg" alt="Imagen_de_revicion" width="300px" height="300px">
+        <img src="{%static 'core/img/obras-de-arte.jpg'%}" alt="Imagen_de_revicion" width="300px" height="300px">
 
     </div>
     <div class="lbl_autor_revicion">
@@ -106,7 +108,7 @@
     
     <div class="bInicio">
 
-        <a href="index.html">Inicio</a>
+        <a href="{%url 'home'%}">Inicio</a>
     </div>    
 
 
