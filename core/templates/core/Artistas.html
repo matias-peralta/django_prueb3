@@ -25,22 +25,22 @@
                 </div>
                 
                 <div>
-                    <a href="Registro.html"> Registrar</a>
+                    <a href="{%url 'Registro' %}"> Registrar</a>
                 </div>
                 <div>
-                    <a href="Login.html">Iniciar Sesion</a>
-                </div>
-
-                <div>
-                    <a href="Conocenos.html">Conocenos</a>
+                    <a href="{%url 'Login' %}">Iniciar Sesion</a>
                 </div>
 
                 <div>
-                    <a href="Nuevas_Obras.html">Obras</a>
+                    <a href="{%url 'Conocenos' %}">Conocenos</a>
                 </div>
 
                 <div>
-                    <a href="Artistas.html"> Artistas</a>
+                    <a href="{%url 'Nuevas_Obras' %}">Obras</a>
+                </div>
+
+                <div>
+                    <a href="{%url 'Artistas' %}"> Artistas</a>
                 </div>
 
                 
@@ -63,10 +63,10 @@
 
             <div>
 
-                <img class="field5" src="./img/artista1.jfif" alt="artista1">
-                <img class="field6" src="./img/guts.jfif" alt="artista2">
-                <img class="field7" src="./img/artista3.png" alt="artista3">
-                <img class="field8" src="./img/artista4.jfif" alt="artista4">
+                <img class="field5" src="{%static 'core/img/artista1.jfif'%}" alt="artista1">
+                <img class="field6" src="{%static 'core/img/guts.jfif'%}" alt="artista2">
+                <img class="field7" src="{%static 'core/img/artista3.png'%}" alt="artista3">
+                <img class="field8" src="{%static 'core/img/artista4.jfif'%}" alt="artista4">
 
             </div>
 
