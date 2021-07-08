@@ -7,3 +7,6 @@ def home(request):
 
 def Agregar_Obra(request):
     return render(request,'core/Agregar_Obra.html')
+
+def Artistas(request):
+    return render(request,'core/Artistas.html')
