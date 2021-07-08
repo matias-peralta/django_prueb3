@@ -6,6 +6,125 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <title>Inicio</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="{% static 'core/css/Style_inicio.css'%}"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+    <script>
+ 
+        $(document).ready(function(){
+           $("#msg").hide();
+           $("#msg2").hide();        
+ 
+           var url = "https://www.metaweather.com/api/location/search/?lattlong=";
+ 
+                //if("geolocation" in navigator)
+                if (navigator.geolocation) {
+                    navigator.geolocation.getCurrentPosition(showPosition);
+                } else {
+                    $("#msg2").append("Geolocation is not supported by this browser.");
+                    $("#msg2").show();
+                }
+             
+            function showPosition(position) {
+                $("#mensajeLatLon").remove();
+                $("#msg").append(`<div id="mensajeLatLon">Latitude: ${position.coords.latitude} <br> Longitude: ${position.coords.longitude}</div>`);
+                
+                var lat = position.coords.latitude;
+                var lon = position.coords.longitude;
+                //https://www.metaweather.com/api/location/search/?lattlong=position.coords.latitude,position.coords.longitude
+                var urlFormatted = `${url}${lat},${lon}`;
+ 
+                $.get(urlFormatted,function(data){
+                    console.log(data);
+                }).then(function(data){
+
+                    //URL PARA OBTENER CLIMA
+                    var nuevaUrl = ` https://www.metaweather.com/api/location/${data[0].woeid} `;
+                    console.log(nuevaUrl);
+
+                    //OBTENER DATOS DE CLIMA POR WOEID
+                    $.get(nuevaUrl,function(data){
+                        console.log(data);
+
+                        console.log(data.consolidated_weather[0].the_temp);
+                    
+                    if(data.consolidated_weather[0].weather_state_abbr == "sn" ){
+
+                            $("#msg3").append("Temperatura del dia: " +   data.consolidated_weather[0].the_temp + " C° " +  data.consolidated_weather[0].weather_state_name + "           " );
+                            $("msg3").show();
+                            $("#msg3").append(`<img src="https://www.metaweather.com/static/img/weather/sn.svg"  width="50px" height="50px">`);
+                        }
+
+                    else if(data.consolidated_weather[0].weather_state_abbr == "hc" ){
+
+                            $("#msg3").append("Temperatura del dia: " +   data.consolidated_weather[0].the_temp + " C° " +  data.consolidated_weather[0].weather_state_name + "              " );
+                            $("msg3").show();
+                            $("#msg3").append(`<img src="https://www.metaweather.com/static/img/weather/hc.svg"  width="50px" height="50px">`);
+                        }
+        
+                    
+                    else if(data.consolidated_weather[0].weather_state_abbr == "sl" ){
+
+                            $("#msg3").append("Temperatura del dia: " +   data.consolidated_weather[0].the_temp + " C° " +  data.consolidated_weather[0].weather_state_name + "              " );
+                            $("msg3").show();
+                            $("#msg3").append(`<img src="https://www.metaweather.com/static/img/weather/sl.svg"  width="50px" height="50px">`);
+                        }
+                    else if(data.consolidated_weather[0].weather_state_abbr == "h" ){
+
+                            $("#msg3").append("Temperatura del dia: " +   data.consolidated_weather[0].the_temp + " C° " +  data.consolidated_weather[0].weather_state_name + "              " );
+                            $("msg3").show();
+                            $("#msg3").append(`<img src="https://www.metaweather.com/static/img/weather/h.svg"  width="50px" height="50px">`);
+                        }
+                    else if(data.consolidated_weather[0].weather_state_abbr == "t" ){
+
+                            $("#msg3").append("Temperatura del dia: " +   data.consolidated_weather[0].the_temp + " C° " +  data.consolidated_weather[0].weather_state_name + "              " );
+                            $("msg3").show();
+                            $("#msg3").append(`<img src="https://www.metaweather.com/static/img/weather/t.svg"  width="50px" height="50px">`);
+                        }
+                    else if(data.consolidated_weather[0].weather_state_abbr == "hr" ){
+
+                            $("#msg3").append("Temperatura del dia: " +   data.consolidated_weather[0].the_temp + " C° " +  data.consolidated_weather[0].weather_state_name + "              " );
+                            $("msg3").show();
+                            $("#msg3").append(`<img src="https://www.metaweather.com/static/img/weather/hr.svg"  width="50px" height="50px">`);
+                        }
+                    else if(data.consolidated_weather[0].weather_state_abbr == "lr" ){
+
+                            $("#msg3").append("Temperatura del dia: " +   data.consolidated_weather[0].the_temp + " C° " +  data.consolidated_weather[0].weather_state_name + "              " );
+                            $("msg3").show();
+                            $("#msg3").append(`<img src="https://www.metaweather.com/static/img/weather/lr.svg"  width="50px" height="50px">`);
+                        }
+                    else if(data.consolidated_weather[0].weather_state_abbr == "s" ){
+
+                            $("#msg3").append("Temperatura del dia: " +   data.consolidated_weather[0].the_temp + " C° " +  data.consolidated_weather[0].weather_state_name + "              " );
+                            $("msg3").show();
+                            $("#msg3").append(`<img src="https://www.metaweather.com/static/img/weather/s.svg"  width="50px" height="50px">`);
+                        }
+                    else if(data.consolidated_weather[0].weather_state_abbr == "lc" ){
+
+                            $("#msg3").append("Temperatura del dia: " +   data.consolidated_weather[0].the_temp + " C° " +  data.consolidated_weather[0].weather_state_name + "              " );
+                            $("msg3").show();
+                            $("#msg3").append(`<img src="https://www.metaweather.com/static/img/weather/lc.svg"  width="50px" height="50px">`);
+                        }
+                    else if(data.consolidated_weather[0].weather_state_abbr == "c" ){
+
+                            $("#msg3").append("Temperatura del dia: " +   data.consolidated_weather[0].the_temp + " C° " +  data.consolidated_weather[0].weather_state_name + "              " );
+                            $("msg3").show();
+                            $("#msg3").append(`<img src="https://www.metaweather.com/static/img/weather/c.svg"  width="50px" height="50px">`);
+                            }
+                    })
+
+
+                })
+ 
+            }
+ 
+        })
+ 
+ 
+    </script>
+    
 </head>
 <body>
     {% load static %}
@@ -67,7 +186,7 @@
 
                 <div class="bInicio">
 
-                    <a href="Agregar_Obra.html">Agregar Obra</a>
+                    <a href="{%url 'Agregar_Obra' %}">Agregar Obra</a>
 
                 </div>
                 
@@ -190,6 +309,9 @@
                     </div>      
                 </div>    
             </div>
+            <br><br><br><br><br>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>  
+
     
     
 </body>
