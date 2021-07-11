@@ -10,7 +10,4 @@ urlpatterns = [
     path('Nuevas_Obras/',Nuevas_Obras,name="Nuevas_Obras"),
     path('registro/',registro,name="registro"),
     path('Revisar_Obras/',Revisar_Obras,name="Revisar_Obras"),
-    
-
- 
 ]

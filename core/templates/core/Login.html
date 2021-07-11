@@ -51,42 +51,27 @@
         </div>
         
     </div>
-    {% block content %}
-
-  {% if form.errors %}
-  <p class="error">Ingrese un nombre de usuario o contraseña valido</p>
-  {% endif %}
-<form action='.' method='post'>
+    
+<form action="">
 
     <p>Correo o Usuario</p>
-    <input type="text" class="form-control" placeholder="Nombre de Usuraio" name="username" >
+    <input type="text" class="field">
     <br>
 
     <p>Contraseña</p>
-    <input type="password" class="form-control" placeholder="Contraseña" name="password" >
+    <input type="text" class="field">
     <br><br>
 
-    <button type="submit" class="btn btn-success btn-flat m-b-30 m-t-30"> Iniciar sesion </button>
-    
-    
-    
-    <input type="hidden" name="next" value="{{ next|escape }}" />
-    <form action='.' method='post'>
+    <input type="button" class="btn btn-green" value="Iniciar Sesion">
 
-    {% endblock %}
+
+
 </form>
 <div class="bInicio">
 
     <a href="{%url 'home'%}">Inicio</a>
 
 </div>
-
-
-
-
-
-
-
 <br><br><br><br>
 
 </body>
