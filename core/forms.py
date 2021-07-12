@@ -5,4 +5,4 @@ from .models import obras
 class obrasForm(ModelForm):
     class Meta:
         model = obras
-        fields = ['titulo_obra','precio_obra','tecnica_obra','dimenciones_obra','peso_obra','descripcion_obra','imagen_obra']
+        fields = ['titulo_obra','precio_obra','tecnica_obra','dimenciones_obra','peso_obra','descripcion_obra','imagen_obra','artista']
