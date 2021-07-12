@@ -12,7 +12,7 @@
     {%load static%}
 <div class="container-fluid">
     <div class="logo">
-        <img src="{%static 'core/img/logo.png'%}" alt="logo arte">
+        <a href="{%url 'home' %}"> <img src="{% static 'core/img/logo.png' %}"  alt="logo arte"/> </a>
 
     </div>
     <div class="encabezado">
@@ -85,11 +85,7 @@
 
        </form>
     </div>
-    <div class="bInicio">
 
-        <a href="{%url 'home'%}">Inicio</a>
-    
-    </div>
     <br><br><br><br><br>
 
 

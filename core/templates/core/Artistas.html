@@ -13,7 +13,7 @@
     <div class="container-fluid">
     <div class="row">
             <div class="logo">
-                <img src="{%static 'core/img/logo.png'%}" alt="logo arte">
+                <a href="{%url 'home' %}"> <img src="{% static 'core/img/logo.png' %}"  alt="logo arte"/> </a>
 
             </div>
             <div class="encabezado">
@@ -71,10 +71,7 @@
             </div>
 
             </form>
-            <div class="bInicio">
-
-                <a href="{%url 'home'%}">Inicio</a>
-            </div>    
+                
         </div> 
     </div>
     <br><br><br><br>
