@@ -49,10 +49,41 @@
 
     </div>
     <br>
+    <div class="row">
     
+        <table>
+            <tr>
+                <td>id_obra</td>
+                <td>titulo_obra</td>
+                <td>precio_obra</td>
+                <td>tecnica_obra</td>
+                <td>dimenciones_obra</td>
+                <td>peso_obra</td>
+                <td>descripcion_obra</td>
+                <td>imagen_obra</td>
+               
+            </tr>
+            {% for ve in listaobras %}
+            <tr>
+                <td>{{ve.id_obra}}</td>
+                <td>{{ve.titulo_obra}}</td>
+                <td>{{ve.precio_obra}}</td>
+                <td>{{ve.tecnica_obra}}</td>
+                <td>{{ve.dimenciones_obra}}</td>
+                <td>{{ve.peso_obra}}</td>
+                <td>{{ve.descripcion_obra}}</td>
+                <td>{{ve.imagen_obra}}</td>
+                
+            </tr>
+            {% endfor %}
 
 
 
+
+
+        </table>
+
+    </div>
 
 
 
