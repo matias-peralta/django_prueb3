@@ -44,5 +44,9 @@ def Crud_obra(request):
     return render(request,'core/Crud_obra.html',datos)
 
 
-def Crud_Obra(request,id):
-    obra = obras
+def Crud_Mod_Obra(request,id):
+    obra = obras.objects.get(id_obra=id)
+    datos= {
+        'form':obrasForm(instance=obra)
+    }
+    return render(request,'core/Crud_Mod_Obra.html',datos)

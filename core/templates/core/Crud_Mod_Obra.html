@@ -8,23 +8,18 @@
     <title>Document</title>
 </head>
 <body>
-    <h3> Crear Obra</h3>
-    <form method="POST" action="" id="formulario">
-        {% csrf_token %}
-        <div class="form-group">
-            {{form.as_table}}
+<h1>modificar Obra </h1>
+<form method="POST" action="" id="formulario">
+    {% csrf_token %}
+    <div class="form-group">
+        {{form.as_table}}
 
-        </div>
-        <input type="submit" class="btn btn-danger" id="enviar" value="Enviar">
-        <input type="reset" class="btn btn-primary" id="limpiar" value="Limpiar">
-
-    </form>
-    <div class="alert-alert-success" role="alert">
-        {{mensaje}}
     </div>
+    <input type="submit" class="btn btn-danger" id="enviar" value="Modificar">
+    <input type="reset" class="btn btn-primary" id="limpiar" value="Limpiar">
 
-
-
-
+</form>
+<div class="alert-alert-success" role="alert">
+    {{mensajemodificar}}
+</div>
 </body>
-</html>
