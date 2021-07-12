@@ -11,8 +11,7 @@
 <body>
     {%load static%}
     <div class="logo">
-        <img src="{%static 'core/img/logo.png'%}" alt="logo arte">
-
+        <a href="{%url 'home' %}"> <img src="{% static 'core/img/logo.png' %}"  alt="logo arte"/> </a>
     </div>
     <div class="encabezado">
         <div >
@@ -50,69 +49,7 @@
 
     </div>
     <br>
-    <div class="img_revicion_obra">
-        <img src="{%static 'core/img/obras-de-arte.jpg'%}" alt="Imagen_de_revicion" width="300px" height="300px">
-
-    </div>
-    <div class="lbl_autor_revicion">
-        <h3>  Autor </h3>
-    </div>
     
-<div>
-    <form action="">
-        
-        <input type="text" class="field1">
-        <input type="text" class="field2">
-        <input type="text" class="field3">
-        <input type="text" class="field4">
-        <input type="text" class="field5">
-        <input type="text" class="field6">
-        <input type="text" class="field7">
-        <input type="text" class="field8">
-        <input type="text" class="field9">
-        <input type="checkbox" class="checkbox1" >
-        <div class="lbl_cbox">
-            <h3>Aprobado</h3>
-        </div>
-        <input type="checkbox" class="checkbox2">
-        <div class="lbl_cbox2">
-            <h3>Desaprobado</h3>
-        </div>
-        <input type="button" class="btn btn-green" value="Enviar">
-    </form>
-
- </div>
-
- 
-    <div class="lbl_titulo_revicion">
-        <h3> Titulo</h3>
-    </div>
-    <div class="lbl_precio_revicion">
-        <h3>Precio</h3>
-    </div>
-    <div class="lbl_tecnica_revicion">
-        <h3>Tecnica</h3>
-    </div>
-    <div class="lbl_descripcion_revicion">
-        <h3>Descripcion</h3>
-    </div>
-    <div class="lbl_historia_revicion">
-        <h3>Historia</h3>
-    </div>
-    <div class="lbl_peso_revicion">
-        <h3>Peso</h3>
-    </div>
-    <div class="lbl_dimensiones_revicion">
-        <h3>Dimensiones</h3>
-    </div>
-    <div class="lbl_comentarios_revicion">
-        <h3> Comentarios </h3>
-    </div>
-    
-    <div class="bInicio">
-
-        <a href="{%url 'home'%}">Inicio</a>
-    </div>    
 
 
 
