@@ -1,3 +1,4 @@
+from core.forms import obrasForm
 from core.models import obras
 from django.http import request
 from django.shortcuts import render
@@ -30,3 +31,9 @@ def obras_locales(request):
         'listaobras':mobras
     }
     return render(request,'core/obras_locales.html',datos)
+
+def Crud_obra(request):
+    datos= {
+        'form':obrasForm()
+    }
+    return render(request,'core/Crud_obra.html',datos)
