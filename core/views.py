@@ -36,4 +36,13 @@ def Crud_obra(request):
     datos= {
         'form':obrasForm()
     }
+    if request.method == 'POST':
+        formulario =obrasForm(request.POST)
+        if formulario.is_valid:
+            formulario.save()
+            datos['mensaje'] ="Guardado Correctamente"
     return render(request,'core/Crud_obra.html',datos)
+
+
+def Crud_Obra(request,id):
+    obra = obras
