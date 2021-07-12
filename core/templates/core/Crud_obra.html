@@ -9,13 +9,13 @@
 </head>
 <body>
     <h3> hello world</h3>
-    <form action="">
+    <form method="POST" action="" id="formulario">
         {% csrf_token %}
         <div class="form-group">
             {{form.as_table}}
 
         </div>
-
+        <input type="submit" class="btn btn-danger" id="enviar" value="enviar">
     </form>
 
 </body>
