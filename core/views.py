@@ -29,4 +29,4 @@ def obras_locales(request):
     datos={
         'listaobras':mobras
     }
-    return render(request,'core/obras_locales.html')
+    return render(request,'core/obras_locales.html',datos)
