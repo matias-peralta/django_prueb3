@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {%load static%}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{%static 'core/css/Style_Revisar_obra.css'%}" type="text/css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <title>Aprobar_Obra</title>
+</head>
+<body>
+    {%load static%}
+    <div class="logo">
+        <a href="{%url 'home' %}"> <img src="{% static 'core/img/logo.png' %}"  alt="logo arte"/> </a>
+    </div>
+    <div class="encabezado">
+        <div >
+
+        <h1 class="titulopagina">Galeria de Arte</h1>
+        
+        
+        </div>
+        
+        <div>
+            <a href="{%url 'registro' %}"> Registrar</a>
+        </div>
+        <div>
+            <a href="{%url 'Login' %}">Iniciar Sesion</a>
+        </div>
+
+        <div>
+            <a href="{%url 'Conocenos' %}">Conocenos</a>
+        </div>
+
+        <div>
+            <a href="{%url 'Nuevas_Obras' %}">Obras</a>
+        </div>
+
+        <div>
+            <a href="{%url 'Artistas' %}"> Artistas</a>
+        </div>
+
+        
+    </div>
+    
+    <div>
+
+        <img class ="tamañoportada" src="{%static 'core/img/portada.jpg'%}" class="img-fluid" alt="Portada Pagina"   >
+
+    </div>
+    <br>
+    <div class="row">
+    
+        <table>
+            <tr>
+                <td>id_obra</td>
+                <td>titulo_obra</td>
+                <td>precio_obra</td>
+                <td>tecnica_obra</td>
+                <td>dimenciones_obra</td>
+                <td>peso_obra</td>
+                <td>descripcion_obra</td>
+                <td>imagen_obra</td>
+               
+            </tr>
+            {% for ve in listaobras %}
+            <tr>
+                <td>{{ve.id_obra}}</td>
+                <td>{{ve.titulo_obra}}</td>
+                <td>{{ve.precio_obra}}</td>
+                <td>{{ve.tecnica_obra}}</td>
+                <td>{{ve.dimenciones_obra}}</td>
+                <td>{{ve.peso_obra}}</td>
+                <td>{{ve.descripcion_obra}}</td>
+                <td>{{ve.imagen_obra}}</td>
+                <td> <a href="{% url 'Crud_Mod_Obra' ve.id_obra %}">Modificar </a> </td>
+                <td> <a href="{% url 'Crud_del_Obra' ve.id_obra %}">Eliminar </a> </td>
+                
+            </tr>
+            {% endfor %}
+
+            
+
+
+
+
+        </table>
+
+    
+
+
+
+
+
+
+
+
+
+    
+</body>
+</html>
