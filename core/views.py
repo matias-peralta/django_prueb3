@@ -1,3 +1,4 @@
+from core.models import obras
 from django.http import request
 from django.shortcuts import render
 
@@ -24,4 +25,8 @@ def registro(request):
     return render(request,'core/registro.html')
 
 def obras_locales(request):
+    mobras=obras.objects.all()
+    datos={
+        'listaobras':mobras
+    }
     return render(request,'core/obras_locales.html')
