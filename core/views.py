@@ -23,5 +23,5 @@ def Nuevas_Obras(request):
 def registro(request):
     return render(request,'core/registro.html')
 
-def Revisar_Obras(request):
-    return render(request,'core/Revisar_Obras.html')
+def obras_locales(request):
+    return render(request,'core/obras_locales.html')
