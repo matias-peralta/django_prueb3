@@ -72,7 +72,9 @@
                 <td> <a href="{% url 'Crud_Mod_Artista' ve.id_Artista %}">Modificar </a> </td>
                 <td> <a href="{% url 'Crud_del_Artista' ve.id_Artista %}">Eliminar </a> </td>
                 
+                
             </tr>
+             
             {% endfor %}
 
             
@@ -81,8 +83,19 @@
 
 
         </table>
+        
+           
+        <a href="{% url 'Agregar_Artista'%}">Añadir Nuevo Artista</a>
 
-    
+            
+            
+                
+            
+            
+        </div>
+        
+        
+
 
 
 
