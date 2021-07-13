@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     {%load static%}
+    {% load widget_tweaks %}
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -87,6 +88,29 @@
     </div>
 
     <br><br><br><br><br>
+    {% block content %}
+
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <div class="card">
+            <img class="card-img-top" src="{% static '/img/logo.png' %}" alt="Logo auto">
+            <div class="card-body">
+                <form method="POST">{% csrf_token %}
+                    {% for field in form %}
+                    <p>{{field.label}}</p>
+                    <p>{{field|add_class:"form-control"}}</p>
+                    {% for error in field.errors %}
+                    <p class="alarma">{{error}}</p>
+                    {% endfor %}
+                    {% endfor %}
+                    <input value="Registrar Usuario" class="btn btn-success btn-block" type="submit">
+                </form>
+                <a href="{% url 'Login' %}">¿Ya tienes tu cuenta? Inicia sesión aqui</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
 
 
 </div>

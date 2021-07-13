@@ -1,5 +1,6 @@
 from django.urls import path
 from .views import Agregar_Artista, Agregar_Obra, Artistas, Conocenos, Crud_Mod_Artista, Crud_Mod_Obra, Crud_del_Artista, Crud_del_Obra, Crud_obra, Mod_Artista, Mod_Obra_Admin, home, Login, Nuevas_Obras, obras_locales, registro
+from . import views
 
 urlpatterns = [
     path('',home,name="home"),
@@ -20,5 +21,7 @@ urlpatterns = [
     path('Crud_Mod_Artista/<id>',Crud_Mod_Artista,name="Crud_Mod_Artista"),
     path('Mod_Artista',Mod_Artista,name="Mod_Artista"),
     path('Crud_del_Artista/<id>',Crud_del_Artista,name="Crud_del_Artista"),
+    path('registro/',views.registro, name='Registro'),
+    path('login/', views.login, name='Login')
     
 ]
