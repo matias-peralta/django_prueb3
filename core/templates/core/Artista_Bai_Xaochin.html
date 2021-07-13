@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
     <link type="text/css" rel="stylesheet" href="{% static 'core/css/Style_Artistas.css'%}" />
+    <title>Document</title>
 </head>
 <body>
     {%load static%}
@@ -53,29 +53,23 @@
             </div>
 
             <br><br><br>
-
-            <a href="{%url 'Artista_Ichigo'%}"><b class="field">Ichigo</b></a>
-            <a href="{%url 'Artista_Nathan'%}"><b class="field2">Nathan</b></a>
-            <a href="{%url 'Artista_Bai_Xaochin'%}"><b class="field3">Bai Xaochin</b></a>
-            <a href="{%url 'Artista_Miguel_Works'%}"><b class="field4">Miguel Works</b></a>
-
-            <br><br>
-
             <div>
-
-                <a href="{%url 'Artista_Ichigo'%}"><img class="field5" src="{%static 'core/img/artista1.jfif'%}" alt="artista1"></a>
-                <a href="{%url 'Artista_Nathan'%}"><img class="field6" src="{%static 'core/img/guts.jfif'%}" alt="artista2"></a>
-                <a href="{%url 'Artista_Bai_Xaochin'%}"><img class="field7" src="{%static 'core/img/artista3.png'%}" alt="artista3"></a>
-                <a href="{%url 'Artista_Miguel_Works'%}"><img class="field8" src="{%static 'core/img/artista4.jfif'%}" alt="artista4"></a>
-
+            <img class="img1" src="{% static 'core/img/artista3.png' %}" alt="artista Ichigo">
             </div>
-
-            </form>
+            <div>
+                <h3>Nombre: Bai Xaochin</h3>
+                <h3>Edad: 19</h3>
+                <h3>Fecha De Nacimiento: 25 de marzo del 2002</h3>
+                <h3>Tecnica: imprecionismo</h3>
+                <h3>Descripcion: joven actor ganador del premio de arte jovenes pintores</h3>
+            </div>
                 
-        </div> 
+    </div> 
     </div>
     <br><br><br><br>
     
     <br>
+    
+  
  </body>
  </html>

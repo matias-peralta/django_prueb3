@@ -108,12 +108,15 @@ def Crud_del_Artista(request,id):
 
     return redirect(to="Mod_Artista")
 
-#cracion del logout
-def logout_request(request):
-    logout(request)
-    messages.info(request,"saliste exitosamente")
-    return redirect ("main: home")
+#paginas internas
+def Artista_Ichigo(request):
+    return render(request,'core/Artista_Ichigo.html')
 
-def login_request(request):
-    form = AuthenticationForm()
-    return render (request, "core/login.html",{"form" : form})
+def Artista_Nathan(request):
+    return render(request,'core/Artista_Nathan.html')
+
+def Artista_Bai_Xaochin(request):
+    return render(request,'core/Artista_Bai_Xaochin.html')
+
+def Artista_Miguel_Works(request):
+    return render(request,'core/Artista_Miguel_Works.html')
