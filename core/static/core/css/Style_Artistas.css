@@ -38,7 +38,7 @@
 .field5{
 
     position: relative;
-    left: 160px;
+    left: 1600px;
     bottom: 35px;
 
 }
@@ -104,4 +104,9 @@
     width: 170px;
     
     
+}
+
+.img1 {
+    position: relative;
+    right: 300px;
 }
