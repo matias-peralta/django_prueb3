@@ -16,8 +16,6 @@ Including another URLconf
 from django.contrib import admin
 from django.contrib.auth import login
 from django.urls import path,include
-from django.conf import settings
-from django.conf.urls.static import static
 
 
 app_name= 'main'
@@ -25,8 +23,6 @@ app_name= 'main'
 urlpatterns = [
     path('admin/',admin.site.urls),
     path('',include('core.urls')) ,
-   
+
    
 ]
-
-urlpatterns+= static(settings.MEDIA_URL, document_root=settings.MEDIA_root)

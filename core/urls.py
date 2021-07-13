@@ -1,6 +1,5 @@
 from django.urls import path
-from .views import Agregar_Artista, Agregar_Obra, Artistas, Conocenos, Crud_Mod_Artista, Crud_Mod_Obra, Crud_del_Artista, Crud_del_Obra, Crud_obra, Mod_Artista, Mod_Obra_Admin, home, Login, Nuevas_Obras, obras_locales, registro
-from . import views
+from .views import Agregar_Artista, Agregar_Obra, Artista_Bai_Xaochin, Artista_Ichigo, Artista_Miguel_Works, Artista_Nathan, Artistas, Conocenos, Crud_Mod_Artista, Crud_Mod_Obra, Crud_del_Artista, Crud_del_Obra, Crud_obra, Mod_Artista, Mod_Obra_Admin, home, Login, Nuevas_Obras, obras_locales, registro
 
 urlpatterns = [
     path('',home,name="home"),
@@ -21,7 +20,11 @@ urlpatterns = [
     path('Crud_Mod_Artista/<id>',Crud_Mod_Artista,name="Crud_Mod_Artista"),
     path('Mod_Artista',Mod_Artista,name="Mod_Artista"),
     path('Crud_del_Artista/<id>',Crud_del_Artista,name="Crud_del_Artista"),
-    path('registro/',views.registro, name='Registro'),
-    path('login/', views.login, name='Login')
+    #paginas interiores
+    path('Artista_Ichigo',Artista_Ichigo,name="Artista_Ichigo"),
+    path('Artista_Nathan',Artista_Nathan,name="Artista_Nathan"),
+    path('Artista_Bai_Xaochin',Artista_Bai_Xaochin,name="Artista_Bai_Xaochin"),
+    path('Artista_Miguel_Works',Artista_Miguel_Works,name="Artista_Miguel_Works"),
+
     
 ]

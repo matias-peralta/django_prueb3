@@ -1,11 +1,7 @@
-from django.contrib.auth import authenticate
-import core
-from core import forms
-from core.forms import artistaForm, obrasForm, RegistroForm , AutenticarForm
+from core.forms import artistaForm, obrasForm
 from core.models import Artista, obras
 from django.http import request
 from django.shortcuts import render,redirect
-
 
 # Create your views here.
 def home(request):
@@ -112,11 +108,15 @@ def Crud_del_Artista(request,id):
 
     return redirect(to="Mod_Artista")
 
-#cracion del login
-def login (request):
-    form = AutenticarForm()
-    return render(request, "core/login.html", {'form':form})
+#paginas internas
+def Artista_Ichigo(request):
+    return render(request,'core/Artista_Ichigo.html')
 
-def registro(request):
-    form = RegistroForm()
-    return render(request, "core/registro.html", {'form':form})
+def Artista_Nathan(request):
+    return render(request,'core/Artista_Nathan.html')
+
+def Artista_Bai_Xaochin(request):
+    return render(request,'core/Artista_Bai_Xaochin.html')
+
+def Artista_Miguel_Works(request):
+    return render(request,'core/Artista_Miguel_Works.html')
