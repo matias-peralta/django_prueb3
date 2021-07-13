@@ -108,3 +108,12 @@ def Crud_del_Artista(request,id):
 
     return redirect(to="Mod_Artista")
 
+#cracion del logout
+def logout_request(request):
+    logout(request)
+    messages.info(request,"saliste exitosamente")
+    return redirect ("main: home")
+
+def login_request(request):
+    form = AuthenticationForm()
+    return render (request, "core/login.html",{"form" : form})
