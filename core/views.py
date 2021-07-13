@@ -1,5 +1,5 @@
-from core.forms import obrasForm
-from core.models import obras
+from core.forms import artistaForm, obrasForm
+from core.models import Artista, obras
 from django.http import request
 from django.shortcuts import render,redirect
 
@@ -69,3 +69,42 @@ def Crud_del_Obra(request,id):
     obra.delete()
 
     return redirect(to="Mod_Obra_Admin")
+
+
+def Mod_Artista(request):
+    martista=Artista.objects.all()
+    datos={
+        'listaArtista':martista
+    }
+    return render(request,'core/Mod_Artista.html',datos)
+    
+def Agregar_Artista(request):
+    datos= {
+        'form':artistaForm()
+    }
+    if request.method == 'POST':
+        formulario =artistaForm(request.POST)
+        if formulario.is_valid:
+            formulario.save()
+            datos['mensaje'] ="Guardado Correctamente"
+    return render(request,'core/Agregar_Artista.html',datos)
+
+def Crud_Mod_Artista(request,id):
+    Artista1 = Artista.objects.get(id_Artista=id)
+    datos= {
+        'form':artistaForm(instance=Artista1)
+    }
+    if request.method == 'POST':
+        formulario = artistaForm(data=request.POST, instance=Artista1)
+        if formulario.is_valid:
+            formulario.save()
+            datos['mensaje'] = "Modificado correctamente"
+
+    return render(request,'core/Crud_Mod_Artista.html',datos)
+
+def Crud_del_Artista(request,id):
+    Artista1 = Artista.objects.get(id_Artista = id)
+    Artista1.delete()
+
+    return redirect(to="Mod_Artista")
+

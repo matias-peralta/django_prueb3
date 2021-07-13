@@ -54,29 +54,23 @@
     
         <table>
             <tr>
-                <td>id_obra</td>
-                <td>titulo_obra</td>
-                <td>precio_obra</td>
-                <td>tecnica_obra</td>
-                <td>dimenciones_obra</td>
-                <td>peso_obra</td>
-                <td>descripcion_obra</td>
-                <td>imagen_obra</td>
-                <td>Artista</td>
+                <td>id_Artista</td>
+                <td>nombre_Artista</td>
+                <td>edad_Artista</td>
+                <td>nacimiento_Artista</td>
+                <td>tecnica_Artista</td>
+                <td>descripcion_Artista</td>
             </tr>
-            {% for ve in listaobras %}
+            {% for ve in listaArtista %}
             <tr>
-                <td>{{ve.id_obra}}</td>
-                <td>{{ve.titulo_obra}}</td>
-                <td>{{ve.precio_obra}}</td>
+                <td>{{ve.id_Artista}}</td>
+                <td>{{ve.nombre_Artista}}</td>
+                <td>{{ve.edad_Artista}}</td>
+                <td>{{ve.nacimiento_Artista}}</td>
                 <td>{{ve.tecnica_obra}}</td>
-                <td>{{ve.dimenciones_obra}}</td>
-                <td>{{ve.peso_obra}}</td>
-                <td>{{ve.descripcion_obra}}</td>
-                <td>{{ve.imagen_obra}}</td>
-                <td>{{ve.Artista}}</td>
-                <td> <a href="{% url 'Crud_Mod_Obra' ve.id_obra %}">Modificar </a> </td>
-                <td> <a href="{% url 'Crud_del_Obra' ve.id_obra %}">Eliminar </a> </td>
+                <td>{{ve.descripcion_Artista}}</td>
+                <td> <a href="{% url 'Crud_Mod_Artista' ve.id_Artista %}">Modificar </a> </td>
+                <td> <a href="{% url 'Crud_del_Artista' ve.id_Artista %}">Eliminar </a> </td>
                 
             </tr>
             {% endfor %}
